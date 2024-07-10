@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_50sdp"
+    tools:context=".DetailsActivity">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/app_color"
+        android:clickable="true"
+        android:elevation="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/back_lumpsum"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/cir"
+            android:src="@drawable/arrow_left_alt_24dp_fill0_wght400_grad0_opsz24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="EMI Result"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/img_pdf"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pdf"
+            app:tint="@color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/emi_details_container"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+
+        android:backgroundTint="@color/app_color"
+        app:cardElevation="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@drawable/v_repeat_img" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Principal Amount"
+                         android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/principalAmountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Principal Amount"
+                         android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/v_repeat_img" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount"
+                         android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/totalAmountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount"
+                         android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/loanDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="16dp"
+        android:text="Summary"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Interest Rate:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvInterestRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interest Rate:"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Loan Tenure"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/et_tenure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenure:"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Monthly EMI:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMI:"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Interest:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTotalInterest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Interest:"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fees &amp; Charges:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvFeesCharges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fees/Charges:"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:background="@drawable/v_repeat_img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Payment:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTotalPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Payment:"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

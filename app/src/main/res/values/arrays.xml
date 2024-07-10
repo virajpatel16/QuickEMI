@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="period_options" >
+        <item>Years</item>
+        <item>Months</item>
+    </string-array>
+        <array name="States">
+            <item>Andhra Pradesh</item>
+            <item>Delhi</item>
+            <item>Gujarat</item>
+            <item>Karnataka</item>
+            <item>Madhya Pradesh</item>
+            <item>Maharashtra</item>
+            <item>Rajasthan</item>
+            <item>Tamil Nadu</item>
+            <item>Uttar Pradesh</item>
+            <item>West Bengal</item>
+    </array>
+
+    <array name="CI_Time_list">
+        <item>Monthly</item>
+        <item>Quarterly</item>
+        <item>Half Yearly</item>
+        <item>Yearly</item>
+    </array>
+
+</resources>

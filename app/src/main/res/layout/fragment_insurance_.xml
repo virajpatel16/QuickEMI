@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.Insurance_Fragment">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/app_color"
+        android:clickable="true"
+        android:elevation="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/backinsurance"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/cir"
+            android:src="@drawable/arrow_left_alt_24dp_fill0_wght400_grad0_opsz24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Insurance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        android:text="General Insurance"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_insurance_general"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        android:text="Life Insurance"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_insurance_life"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

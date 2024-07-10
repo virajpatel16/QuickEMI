@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.Interest_rate_Fragment">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/app_color"
+        android:clickable="true"
+        android:elevation="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/interestback"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/cir"
+            android:src="@drawable/arrow_left_alt_24dp_fill0_wght400_grad0_opsz24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Interest Calculate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_230sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:backgroundTint="@color/app_color"
+            android:elevation="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/white"
+                    app:cursorColor="@color/white"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Principal Amount"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/white"
+                    app:cursorColor="@color/white"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/durationEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Tenure / Period"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@id/radiogroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Year"
+                            app:buttonTint="@color/white"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:buttonTint="@color/white"
+                            android:text="Month"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                    </RadioGroup>
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/resultTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:gravity="end"
+                        android:text="0 Days"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/white"
+                    app:cursorColor="@color/white"
+                    app:hintTextColor="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtInterest"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Interest Rate"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btnCalculate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/app_color"
+                android:fontFamily="@font/kanit_medium"
+                android:padding="@dimen/_1sdp"
+                android:text="Calculate"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:backgroundTint="#4C4141"
+                android:fontFamily="@font/kanit_medium"
+                android:padding="@dimen/_1sdp"
+                android:text="Reset"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emi_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:backgroundTint="@color/app_color"
+                app:cardElevation="@dimen/_10sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maturity Amount"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/maturity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EMI Amount"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_2sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@drawable/v_repeat_img" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Amount"
+                               android:textColor="@color/white"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <TextView
+                                android:id="@+id/total_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Invested Amount"
+                               android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/_2sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:layout_weight="1"
+                        />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Interest Earned"
+                               android:textColor="@color/white"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <TextView
+                                android:id="@+id/Earned"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Amount"
+                               android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

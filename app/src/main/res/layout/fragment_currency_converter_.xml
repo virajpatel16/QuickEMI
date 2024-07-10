@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.Currency_converter_Fragment">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/app_color"
+        android:clickable="true"
+        android:elevation="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/convertback"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/cir"
+            android:src="@drawable/arrow_left_alt_24dp_fill0_wght400_grad0_opsz24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CurrencyConverter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:backgroundTint="@color/app_color"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_7sdp"
+                android:text="Amnount"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spiner_conutry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:hint="Convert from"
+                    android:inputType="numberDecimal"
+                    android:text=""
+              android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_7sdp"
+                android:text="Converted Amount"
+          android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spiner_conutry2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:hint="Convert To"
+                    android:inputType="numberDecimal"
+                    android:text=""
+              android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/convert_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/app_color"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_1sdp"
+            android:text="Convert"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            app:cornerRadius="@dimen/_10sdp" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/reset_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:backgroundTint="#4C4141"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_1sdp"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            app:cornerRadius="@dimen/_10sdp" />
+    </LinearLayout> <!-- TODO: Update blank fragment layout -->
+
+
+</LinearLayout>
